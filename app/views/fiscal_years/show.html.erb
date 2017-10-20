@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @fiscal_year.client_id %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @fiscal_year.year %>
+</p>
+
+<p>
+  <strong>Transactions:</strong>
+  <%= @fiscal_year.transactions %>
+</p>
+
+<%= link_to 'Edit', edit_fiscal_year_path(@fiscal_year) %> |
+<%= link_to 'Back', fiscal_years_path %>

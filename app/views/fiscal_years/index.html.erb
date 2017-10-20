@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fiscal Years</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Client</th>
+      <th>Year</th>
+      <th>Transactions</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fiscal_years.each do |fiscal_year| %>
+      <tr>
+        <td><%= fiscal_year.client_id %></td>
+        <td><%= fiscal_year.year %></td>
+        <td><%= fiscal_year.transactions %></td>
+        <td><%= link_to 'Show', fiscal_year %></td>
+        <td><%= link_to 'Edit', edit_fiscal_year_path(fiscal_year) %></td>
+        <td><%= link_to 'Destroy', fiscal_year, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fiscal Year', new_fiscal_year_path %>
